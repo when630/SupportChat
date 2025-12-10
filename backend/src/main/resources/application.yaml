@@ -1,3 +1,21 @@
 spring:
   application:
     name: supportchat
+  datasource:
+    url: jdbc:mysql://localhost:3306/support_chat?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: Dlawodjs630!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # or 'validate' in prod
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  
+logging:
+  level:
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
